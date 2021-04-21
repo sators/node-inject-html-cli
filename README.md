@@ -11,22 +11,22 @@ $ npm install -g node-inject-html-cli
 Then...
 ```
 // Inject a script to index.html
-$ inject-html -f index.html --headStart='<script src="https://someanalyticsfunction.com"></script>'
+$ inject-html -f index.html --headStart="<script src='https://someanalyticsfunction.com'></script>"
 ```
 ```
 // Add a meta tag to all .html files
-$ inject-html -f **/*.html --headEnd='<meta name="viewport" content="width=device-width, initial-scale=1">'
+$ inject-html -f **/*.html --headEnd="<meta name='viewport' content='width=device-width, initial-scale=1'>"
 ```
 
 ## Usage via npx
 
 ```
 // Inject a script to index.html
-$ npx node-inject-html-cli -f index.html --headStart='<script src="https://someanalyticsfunction.com"></script>'
+$ npx node-inject-html-cli -f index.html --headStart="<script src='https://someanalyticsfunction.com'></script>"
 ```
 ```
 // Add a meta tag to all .html files
-$ npx node-inject-html-cli -f **/*.html --headEnd='<meta name="viewport" content="width=device-width, initial-scale=1">'
+$ npx node-inject-html-cli -f **/*.html --headEnd='<meta name='viewport' content='width=device-width, initial-scale=1'>"
 ```
 
 ## Options

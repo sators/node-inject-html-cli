@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const { exit } = require("process")
+const glob = require("glob")
 const inject = require('node-inject-html').default
 const argv = require('yargs')
     .scriptName("inject-html")
@@ -18,7 +19,8 @@ const argv = require('yargs')
     .argv
 
 const injectHtml = async () => {
-    const files = argv._.length ? argv._ : [argv.file]
+    console.log(argv._, argv.f)
+    const files = argv._.length ? argv._ : glob.sync(argv.file)
     files.forEach(file => {
         const html = fs.readFileSync(file, "utf8")
         const newHtml = inject(html, {

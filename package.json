@@ -17,6 +17,7 @@
   "author": "Sators <sators@sators.com>",
   "license": "ISC",
   "dependencies": {
+    "glob": "^7.1.6",
     "node-inject-html": "0.0.5",
     "yargs": "^16.2.0"
   },
